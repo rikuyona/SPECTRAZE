@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@use './util/util' as *;
+
+:root {
+	--fz: 10px;
+	font-size: var(--fz);
+}
+
+body {
+	color: $c-black;
+	@include font-family;
+	@include fz(14);
+}
+li {
+	list-style: none;
+}
+a {
+	color: $c-black;
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	vertical-align: bottom;
+}
+
+#main {
+	overflow-x: clip;
+}
+
+.wrapper {
+	@include media_wide {
+		min-width: 1024px;
+	}
+}

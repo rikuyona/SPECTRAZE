@@ -1,0 +1,82 @@
+@charset "utf-8";
+@use 'sass:math';
+
+/*------------------------------------------------
+mixins
+------------------------------------------------*/
+@mixin fz($font-size) {
+	font-size: math.div($font-size, 10) * 1rem;
+}
+
+@mixin delay($length, $delay: 0.05, $offset: 0, $nth: 'child') {
+	@for $i from 1 through $length {
+		@if $nth == 'child' {
+			&:nth-child(#{$i}) {
+				transition-delay: #{$delay * ($i - 1) + $offset}s;
+			}
+		} @else if $nth == 'type' {
+			&:nth-of-type(#{$i}) {
+				transition-delay: #{$delay * ($i - 1) + $offset}s;
+			}
+		}
+	}
+}
+
+/*------------------------------------------------
+font
+------------------------------------------------*/
+// メインのフォント
+@mixin font-family {
+	font-family: 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', '游ゴシック', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+}
+
+// テキストスタイルのmixin
+@mixin txt-basic {
+	@include fz(14);
+	font-weight: 400;
+	line-height: 1.9;
+	@include media_narrow {
+		@include fz(13);
+	}
+}
+
+@mixin txt-basic--bold {
+	@include txt-basic;
+	font-weight: 600;
+}
+
+/*---------------------------------------------
+color
+---------------------------------------------*/
+$c-white: #ffffff;
+$c-black: #000000;
+
+/*---------------------------------------------
+ease
+---------------------------------------------*/
+$e-out: cubic-bezier(0.7, 0, 0.1, 1);
+$e-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$e-out-circ: cubic-bezier(0, 0.07, 0.02, 0.83);
+$e-out-bounce: cubic-bezier(0.45, 1.31, 0.33, 1.15);
+$e-inOut: cubic-bezier(0.9, 0, 0.1, 1);
+
+/*------------------------------------------------
+media
+------------------------------------------------*/
+@mixin media_narrow {
+	@media screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin media_wide {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin media_hover {
+	@media (hover: hover) {
+		@content;
+	}
+}
