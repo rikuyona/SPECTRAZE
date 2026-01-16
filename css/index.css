@@ -1,24 +1,62 @@
 @charset "UTF-8";
-/*------------------------------------------------
-mixins
-------------------------------------------------*/
-/*------------------------------------------------
-font
-------------------------------------------------*/
-/*---------------------------------------------
-color
----------------------------------------------*/
-/*---------------------------------------------
-ease
----------------------------------------------*/
-/*------------------------------------------------
-media
-------------------------------------------------*/
-/*------------------------------------------------
-functions
-------------------------------------------------*/
-/* vw ------------ */
-/* minpx ------------ */
-/* maxpx ------------ */
-/* vw clammp ------------ */
-/* ▼▼ この下にスタイル ▼▼ ------------ *//*# sourceMappingURL=index.css.map */
+.wrapper {
+  width: 100%;
+}
+
+#photo {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+}
+
+#photo img {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+
+  margin: auto;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-images video {
+  width: 100%;
+  height: auto;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}

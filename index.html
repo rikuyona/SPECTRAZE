@@ -32,53 +32,91 @@
       color="#dc1405"
     />
     <link rel="shortcut icon" href="/assets/img/common/favicon/favicon.ico" />
-
     <!-- css -->
     <link rel="stylesheet" href="./css/index.css" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      $(function () {
+        var setImg = "#photo";
+        var fadeSpeed = 1600;
+        var switchDelay = 5000;
+
+        $(setImg).children("img").css({ opacity: "0" });
+        $(setImg + " img:first")
+          .stop()
+          .animate({ opacity: "1", zIndex: "20" }, fadeSpeed);
+
+        setInterval(function () {
+          $(setImg + " :first-child")
+            .animate({ opacity: "0" }, fadeSpeed)
+            .next("img")
+            .animate({ opacity: "1" }, fadeSpeed)
+            .end()
+            .appendTo(setImg);
+        }, switchDelay);
+      });
+    </script>
   </head>
   <body>
     <div class="wrapper">
       <header id="header">
         <nav></nav>
         <h1>
-          <a href=""><img src="img/icon.png" alt="icon" /></a>
+          <a href=""><img src="img/icon.png" alt="SPECTRAZE アイコン" /></a>
         </h1>
       </header>
       <main id="main">
         <div class="top">
+          <img src="img/top_logo.png" alt="SPECTRAZE トップロゴ" />
           <div id="photo">
-            <img src="gazou1.jpg" alt="" />
-            <img src="gazou2.jpg" alt="" />
-            <img src="gazou3.jpg" alt="" />
-            <img src="gazou4.jpg" alt="" />
+            <img src="img/top_a.png" alt="トップ画像 A" />
+            <img src="img/top_b.png" alt="トップ画像 B" />
+            <img src="img/top_c.png" alt="トップ画像 C" />
           </div>
-          <img src="/img/main_v.jpg" alt="main_v" />
+          <img src="img/top_bg.jpg" alt="トップ背景画像" class="topbg" />
         </div>
         <div class="00">
-          <img src="img/kopy1.png" alt="kopy1" />
+          <img src="img/kopy1.png" alt="SPECTRAZE 紹介文" />
         </div>
         <div class="01">
-          <img src="img/01_Howto.svg" alt="" />
-          <img src="img/howto.gif" alt="" />
-          <img src="img/Howto_p.svg" alt="" />
+          <img src="img/01_Howto.svg" alt="使い方ガイド" />
+          <img src="img/01_howto.gif" alt="使い方デモンストレーション" />
+          <img src="img/01_howto_p.svg" alt="使い方のポイント" />
         </div>
         <div class="02">
-          <img src="img/02_overv.svg" alt="" />
-          <img src="img/overv_p.svg" alt="" />
+          <img src="img/02_overv.svg" alt="SPECTRAZE 概要" />
+          <img src="img/02_overv_p.svg" alt="概要のポイント" />
         </div>
         <div class="carousel">
           <div class="carousel-images">
-            <img src="img/work1.gif" alt="画像1" />
-            <img src="img/work2.gif" alt="画像2" />
-            <img src="img/mei_02_img07.gif" alt="画像3" />
+            <video src="img/work_tyou.mp4" autoplay muted></video>
+            <video src="img/work_kyou.mp4" autoplay muted></video>
+            <video src="img/work_mei.mp4" autoplay muted></video>
           </div>
           <button class="prev">&lt;</button>
           <button class="next">&gt;</button>
         </div>
       </main>
       <footer id="footer">
-        <img src="img/footer_icon.svg" alt="" />
-        <img src="img/Copyright.svg" alt="" />
+        <img src="img/footer_icon.svg" alt="フッターアイコン" />
+        <nav>
+          <ul>
+            <li><a href="">TOP</a></li>
+            <li><a href="">HOW TO</a></li>
+            <li><a href="">OVER VIWE</a></li>
+          </ul>
+          <p>WORK-3つの世界観</p>
+          <ul>
+            <li><a href="">澄・TYOU</a></li>
+            <li><a href="">饗・KYOU</a></li>
+            <li><a href="">鳴・MEI</a></li>
+          </ul>
+        </nav>
+        <img src="img/footr_Copyright.svg" alt="コピーライト" />
       </footer>
     </div>
 
@@ -90,4 +128,3 @@
     <script src="./js/index.js"></script>
   </body>
 </html>
-
