@@ -60,3 +60,8 @@ body {
 .next {
   right: 10px;
 }
+
+.kopy img {
+  width: calc((1200 / 1280) * 100%);
+  height: auto;
+}
