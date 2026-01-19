@@ -1,5 +1,6 @@
 @charset "UTF-8";
 .wrapper {
+  margin: 0;
   width: 100%;
 }
 
