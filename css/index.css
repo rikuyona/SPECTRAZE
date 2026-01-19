@@ -69,6 +69,13 @@ body {
 .topbg {
   width: 100%;
 }
+
+.top {
+  background-image: url('img/top_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* スマホ用のCSSはメディアクエリの外に記述する */
 
 @media screen and (min-width: 481px) {
