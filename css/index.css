@@ -17,6 +17,7 @@ img {
 }
 
 #photo img {
+  width: 100%;
   top: 0;
   left: 0;
   position: absolute;
@@ -71,7 +72,7 @@ body {
 }
 
 .top {
-  background-image: url('img/top_bg.jpg');
+  background-image: url("img/top_bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
