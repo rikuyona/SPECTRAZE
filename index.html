@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -66,7 +66,24 @@
   <body>
     <div class="wrapper">
       <header id="header">
-        <nav></nav>
+        <div class="hamburger-area">
+          <button class="hamburger" id="hamburger" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="menu" id="menu">
+            <ul>
+              <li><a href="#content1">TOP</a></li>
+              <li><a href="#content2">HOW　TO</a></li>
+              <li><a href="#content3">OVER VIEW</a></li>
+              <li><p>WORK-3つの世界観</p></li>
+              <li><a href="#content4">澄・TYOU</a></li>
+              <li><a href="#content5">饗・KYOU</a></li>
+              <li><a href="#content6">鳴・MEI</a></li>
+            </ul>
+          </nav>
+        </div>
         <h1>
           <a href=""><img src="img/icon.png" alt="SPECTRAZE アイコン" /></a>
         </h1>
@@ -131,5 +148,15 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <!-- original -->
     <script src="./js/index.js"></script>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const menu = document.getElementById("menu");
+      const body = document.body;
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        menu.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>
