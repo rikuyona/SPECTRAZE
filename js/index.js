@@ -36,3 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
     nextButton.click();
   }, 3000); // Change slide every 3 seconds
 });
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const menu = document.getElementById("menu");
+      const body = document.body;
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        menu.classList.toggle("open");
+      });
+    </script>
