@@ -177,17 +177,20 @@ top: 900px;
 }
 
 .howto_1{
-
+  position: absolute;
+  z-index: 950;
   margin-top: 100px;
 }
 
 .howto_2{
-
+  position: absolute;
+  z-index: 950;
   margin-top: -100px;
 }
 
 .howto_3{
-
+  position: absolute;
+  z-index: 950;
   margin-top: -100px;
   margin-bottom: 50px;
 }
@@ -211,15 +214,20 @@ top: 900px;
 }
 
 .overv1{
+  position: absolute;
+  z-index: 950;
   margin-top: 260px;
 }
 
 .overv2{
-  width: 100%;
+  position: absolute;
+  z-index: 950;
   margin-top: -30px;
 }
 
 .overv3{
+  position: absolute;
+  z-index: 950;
   margin-top: 100px
 }
 
