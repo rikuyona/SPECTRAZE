@@ -1,0 +1,214 @@
+@charset "UTF-8";
+/*------------------------------------------------
+mixins
+------------------------------------------------*/
+/*------------------------------------------------
+font
+------------------------------------------------*/
+/*---------------------------------------------
+color
+---------------------------------------------*/
+/*---------------------------------------------
+ease
+---------------------------------------------*/
+/*------------------------------------------------
+media
+------------------------------------------------*/
+/*------------------------------------------------
+functions
+------------------------------------------------*/
+/* vw ------------ */
+/* minpx ------------ */
+/* maxpx ------------ */
+/* vw clammp ------------ */
+/* ▼▼ この下にスタイル ▼▼ ------------ *//*# sourceMappingURL=index.css.map */
+.body{
+    max-width: 390px;
+}
+
+/* リセット */
+.body{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+
+
+/* カスタム変数 */
+:root {
+  --blur-amount: 8px;
+  --dispersion: 0.25; 
+}
+
+.button {
+  position: fixed;
+  width: 59px;
+  height: 59px;
+
+  background:
+    radial-gradient(
+      ellipse at 60% 40%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.05) 100%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.32) 0%,
+      rgba(255, 255, 255, 0.16) 30%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0.04) 70%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
+
+  filter:
+    drop-shadow(1px 0 0 rgba(255, 0, 0, var(--dispersion)))
+    drop-shadow(-1px 0 0 rgba(0, 255, 255, var(--dispersion)));
+    border-radius: 50%;
+}
+
+/* ボタン内画像 */
+.button a img {
+  display: block;
+  margin: 10px auto 0;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* 位置指定 */
+.top_button {
+  position: fixed;
+  top: 763px;
+  left: 316px;
+  z-index: 9999;
+}
+
+/* main */
+.main{
+  position: absolute;
+  z-index: 998;
+}
+.glass{
+  position: absolute;
+  z-index: 998;
+  width: 197px;
+  height: 845px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.toplogo{
+  position: absolute;
+  bottom: 60PX;
+  z-index: 998;
+}
+
+.topp{
+  position: absolute;
+  top: 148px;
+  left: 15px;
+  z-index: 998;
+}
+/* カルーセルを画面中央に */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  top:260px;
+  margin: 0 auto; /* 中央寄せ */
+  z-index: 997;
+}
+
+/* 横並び */
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+
+}
+
+/* 画像サイズ固定（中央表示の基準） */
+.carousel-images img {
+  width: 350px;
+  flex-shrink: 0;
+}
+.top_bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 990;             
+}
+
+.kopy{
+position: relative;  
+top: 900px;
+}
+
+.howto{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 1700px;
+  background-image: url(../img/01_howto_bg.png);
+  background-size: auto 100%;
+}
+
+.howto_1{
+  margin-top: 100px;
+}
+
+.howto_2{
+  margin-top: -100px;
+}
+
+.howto_3{
+  margin-top: -100px;
+  margin-bottom: 50px;
+}
+
+.overview{
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  top: 2540px;
+  background-image: url(../img/02_overv_bg.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+}
+
+.overv1{
+  margin-top: 260px;
+}
+
+.overv2{
+  margin-top: -30px;
+}
+
+.overv3{
+  margin-top: 100px
+}
+
+
+
+.carousel-wrapper{
+  top: 2950px;
+}
+
+.footer{
+  top: 3000px;
+}

@@ -1,0 +1,322 @@
+@charset "UTF-8";
+
+/* =========================
+   リセット
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+
+/* =========================
+   カスタム変数
+========================= */
+:root {
+  --blur-amount: 8px;
+  --dispersion: 0.25;
+}
+
+/* =========================
+   ガラス共通スタイル
+========================= */
+.glass {
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.1),
+    /* 外側の柔らかい影 */ inset 0 0 10px rgba(255, 255, 255, 0.2); /* 内側の反射 */
+  /* --- 【重要】透け感と屈折の設定 --- */
+  /* 背景色はかなり薄く（0.15）設定 */
+  background-color: rgba(255, 255, 255, 0.1);
+
+  /* 背面を強くぼかし、彩度を上げることで「ガラス感」を強調 */
+  -webkit-backdrop-filter: blur(15px) saturate(160%);
+  backdrop-filter: blur(15px) saturate(160%);
+
+  /* --- 縁のライン（これがないと背景に溶け込みすぎる） --- */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* --- 影（うっすらと存在感を与える） --- */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+LOGO
+========================= */
+.logo img {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 53px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+/* =========================
+ハンバーガーボタン
+========================= */
+.hamburger {
+  position: fixed;
+  top: 55px;
+  right: 15px;
+
+  width: 69px;
+  height: 36px;
+  border-radius: 20px;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  z-index: 1000;
+}
+
+.hamburger.active {
+  z-index: 1001;
+}
+
+/* 線 */
+.hamburger span {
+  position: absolute;
+  width: 28px;
+  height: 1.5px;
+  background: #222;
+  transition:
+    transform 0.4s ease,
+    opacity 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  transform: translateY(-3px);
+}
+
+.hamburger span:nth-child(3) {
+  transform: translateY(3px);
+}
+
+/* × 変形 */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(15deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-15deg);
+}
+
+/* =========================
+   メニュー
+========================= */
+.menu {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+.nav_1 {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.hmb_bottom img {
+  position: absolute;
+  top: 723px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+}
+
+.menu.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* スクロール禁止 */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* メニュー内容 */
+.menu ul {
+  height: 100%;
+  list-style: none;
+
+  font-size: 16px;
+  letter-spacing: 3px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+}
+
+.menu a {
+  font-size: 32px;
+  letter-spacing: 3px;
+  color: #222;
+  text-decoration: underline;
+}
+
+/* =========================
+   通常ボタン（TOPボタン）
+========================= */
+.button {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TOPボタン位置 */
+.top_button {
+  position: fixed;
+  bottom: 18px;
+  right: 15px;
+}
+
+/* ボタン内画像 */
+.button img {
+  display: block;
+  margin-top: 5px;
+}
+
+/* =========================
+   button要素初期化
+========================= */
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  /* フリックの挙動を設定 */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  /* スクロールバー非表示 */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  /* スナップの設定 */
+  scroll-snap-align: start;
+  scroll-snap-stop: always; /* これが「1枚ずつ止まる」鍵 */
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SVGを中央に */
+.svg-overlay {
+  position: absolute;
+  top: 40%;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* インジケーター：通常は円、アクティブで30x13.5の角丸四角 */
+.carousel-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 13.5px;
+  height: 13.5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 7px;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.dot.active {
+  width: 30px;
+  height: 13.5px;
+  background-color: #fff;
+  border-radius: 7px;
+}
+.fixed-top-img {
+  position: absolute;
+  top: 93px; /* 上から93px */
+  left: 16px; /* 左から16px */
+  z-index: 100; /* 最前面に表示 */
+  width: 100％; /* サイズは必要に応じて調整してください */
+  pointer-events: none; /* 下にある動画の操作を邪魔しない */
+}
+
+footer {
+  width: 100%;
+  height: 406px;
+  position: relative;
+}
+.footer {
+  align-items: center;
+  position: absolute;
+  left: 36px;
+}
+.footer_logo {
+  margin: 48px 0 60px 0;
+}
+
+.footer_items {
+  display: flex;
+  width: 305px;
+  justify-content: space-between;
+}
+.footer_items ul li {
+  margin-bottom: 5px;
+}
+.footer_2026 {
+  margin-top: 82px;
+}
