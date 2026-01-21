@@ -71,26 +71,7 @@ box-sizing: border-box;
     border-radius: 50%;
 }
 
-/* ボタン内画像 */
-.button a img {
-  display: block;
-  margin: 10px auto 0;
-}
 
-button {
-  appearance: none;
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-/* 位置指定 */
-.top_button {
-  position: fixed;
-  top: 763px;
-  left: 316px;
-  z-index: 9999;
-}
 
 /* main */
 .main{
