@@ -119,6 +119,7 @@ video {
 }
 
 .toplogo{
+  width: 100%;
   position: absolute;
   bottom: 60PX;
   z-index: 998;
