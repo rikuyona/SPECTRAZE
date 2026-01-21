@@ -183,14 +183,14 @@ top: 900px;
 }
 
 .howto_2{
-
+  top: 331px;
   position: absolute;
   z-index: 950;
   margin-top: -100px;
 }
 
 .howto_3{
-
+  top: 619px;
   position: absolute;
   z-index: 950;
   margin-top: -100px;
@@ -222,14 +222,14 @@ top: 900px;
 }
 
 .overv2{
-  height: 454px;
+  top: 454px;
   position: absolute;
   z-index: 950;
   margin-top: -30px;
 }
 
 .overv3{
-  height: 756px;
+  top: 756px;
   position: absolute;
   z-index: 950;
   margin-top: 100px
