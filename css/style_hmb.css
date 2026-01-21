@@ -207,12 +207,12 @@ body.no-scroll {
 /* =========================
    button要素初期化
 ========================= */
-/* button {
+button {
   appearance: none;
   background: none;
   border: none;
   padding: 0;
-} */
+}
 
 .carousel-wrapper {
   position: relative;
