@@ -192,7 +192,8 @@ body.no-scroll {
 /* TOPボタン位置 */
 .top_button {
   position: fixed;
-  bottom: 18px;
+  /* 「40px」に「iPhoneのセーフエリア（バーの高さ分）」を足した位置にする */
+  bottom: calc(40px + env(safe-area-inset-bottom));
   right: 15px;
 }
 
