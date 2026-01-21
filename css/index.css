@@ -170,7 +170,7 @@ top: 900px;
 .howto{
   position: absolute;
   width: 100%;
-  height: 2274px;
+  height: 860px;
   top: 1700px;
   /* background-image: url(../img/01_howto_bg.png);
   background-size: 100% 100%; */
@@ -183,7 +183,7 @@ top: 900px;
 }
 
 .howto_2{
-  top: 331px;
+  top: 300px;
   position: absolute;
   z-index: 950;
   margin-top: -100px;
