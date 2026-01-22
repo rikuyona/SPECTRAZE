@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const carouselImages = document.querySelector('.carousel-images');
   const images = document.querySelectorAll('.carousel-images img');
-  const imageWidth = 100%; // 実際の幅に合わせる
+  const imageWidth = 350px; // 実際の幅に合わせる
   let currentIndex = 1;   // ★ 最初は「本物1枚目」
 
   // 初期位置
