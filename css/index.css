@@ -241,7 +241,6 @@ top: 900px;
 }
 
 .carousel-wrapper{
-  
   width: 100%;
   height: 100vh;
   margin-top: 2880px;
@@ -251,5 +250,6 @@ top: 900px;
 }
 
 .footer{
-  top: 2800px;
+  width: 100%;
+  top: 2000px;
 }
