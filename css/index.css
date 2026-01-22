@@ -134,7 +134,7 @@ video {
 .carousel {
   position: relative;
   overflow: hidden;
-  width: 350px;
+  width: 100%;
   top:260px;
   margin: 0 auto; /* 中央寄せ */
   z-index: 997;
@@ -149,7 +149,7 @@ video {
 
 /* 画像サイズ固定（中央表示の基準） */
 .carousel-images img {
-  width: 350px;
+  width: 100%;
   flex-shrink: 0;
 }
 .top_bg{
