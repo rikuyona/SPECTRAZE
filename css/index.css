@@ -246,9 +246,9 @@ top: 900px;
   margin-top: 2850px;
   margin-bottom: 0;
 }
-.carousel-container{
+/* .carousel-container{
   touch-action:pan-x;
-}
+} */
 
 .fixed-top-img{
   margin-top: 70px;
