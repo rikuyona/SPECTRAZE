@@ -241,7 +241,7 @@ top: 900px;
 }
 
 .carousel-wrapper{
-   -webkit-user-drag: none;  /* 画像ドラッグ防止（Safari/Chrome） */
+  -webkit-user-drag: none;  /* 画像ドラッグ防止（Safari/Chrome） */
   width: 100%;
   height: 100vh;
   margin-top: 2880px;
