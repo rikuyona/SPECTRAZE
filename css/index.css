@@ -241,10 +241,13 @@ top: 900px;
 }
 
 .carousel-wrapper{
-  touch-action:pan-x;
+  
   width: 100%;
   height: 100vh;
   margin-top: 2880px;
+}
+.carousel-container{
+  touch-action:pan-x;
 }
 
 .footer{
