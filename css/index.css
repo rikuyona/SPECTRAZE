@@ -241,9 +241,10 @@ top: 900px;
 }
 
 .carousel-wrapper{
-  top: 2850px;
+  height: 844px;
+  top: 2700px;
 }
 
 .footer{
-  top: 2900px;
+  top: 3100px;
 }
