@@ -196,6 +196,7 @@ body.no-scroll {
   /* 「40px」に「iPhoneのセーフエリア（バーの高さ分）」を足した位置にする */
   bottom: calc(40px + env(safe-area-inset-bottom));
   right: 15px;
+  z-index: 9990;
 }
 
 /* ボタン内画像 */
