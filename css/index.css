@@ -250,3 +250,6 @@ top: 900px;
   touch-action:pan-x;
 }
 
+.fixed-top-img{
+  top: 50px;
+}
