@@ -240,9 +240,29 @@
       const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
       dots.forEach((dot, i) => {
         dot.classList.toggle("active", i === index);
+    
+        const videos = document.querySelectorAll('.carousel-container video');
+
+const playVideos = () => {
+  videos.forEach(video => {
+    if (video.paused) {
+      video.play().catch(() => {});
+    }
+  });
+};
+
+// ページ読み込み時
+document.addEventListener('DOMContentLoaded', playVideos);
+
+// カルーセルに触れた時（ユーザー操作として認識される）
+const carousel = document.getElementById('carousel');
+carousel.addEventListener('touchstart', playVideos);
+carousel.addEventListener('mousedown', playVideos);
+
       });
     });
   </script>
+  
     <!-- mainslide-->
 
 
