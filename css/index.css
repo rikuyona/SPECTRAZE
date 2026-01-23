@@ -241,15 +241,14 @@ top: 900px;
 }
 
 .carousel-wrapper{
-  pointer-events: none;
   width: 100%;
   height: 100vh;
   margin-top: 2850px;
   margin-bottom: 0;
 }
-/* .carousel-container{
-  touch-action:pan-x;
-} */
+.carousel-container{
+    pointer-events: none;
+}
 
 .fixed-top-img{
   margin-top: 70px;
