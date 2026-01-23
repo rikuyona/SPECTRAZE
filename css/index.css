@@ -245,8 +245,9 @@ top: 900px;
   height: 100vh;
   margin-top: 2850px;
   margin-bottom: 0;
+  touch-action: pan-x;
 }
-.carousel-container{
+.carousel-container video{
     pointer-events: none;
 }
 
