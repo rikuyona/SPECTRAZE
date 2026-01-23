@@ -276,5 +276,5 @@ top: 900px;
 
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  touch-action: auto;
+  overscroll-behavior-x: contain;
 }
