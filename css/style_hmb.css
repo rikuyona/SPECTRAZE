@@ -32,8 +32,8 @@ ul {
   background-color: rgba(255, 255, 255, 0.1);
 
   /* 背面を強くぼかし、彩度を上げることで「ガラス感」を強調 */
-  -webkit-backdrop-filter: blur(15px) saturate(160%);
-  backdrop-filter: blur(15px) saturate(160%);
+  -webkit-backdrop-filter: blur(5px) saturate(160%);
+  backdrop-filter: blur(5px) saturate(160%);
 
   /* --- 縁のライン（これがないと背景に溶け込みすぎる） --- */
   border: 1px solid rgba(255, 255, 255, 0.2);
