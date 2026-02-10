@@ -29,7 +29,7 @@ ul {
     /* 外側の柔らかい影 */ inset 0 0 10px rgba(255, 255, 255, 0.2); /* 内側の反射 */
   /* --- 【重要】透け感と屈折の設定 --- */
   /* 背景色はかなり薄く（0.15）設定 */
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.04);
 
   /* 背面を強くぼかし、彩度を上げることで「ガラス感」を強調 */
   -webkit-backdrop-filter: blur(5px) saturate(160%);
